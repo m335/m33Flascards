@@ -16,5 +16,6 @@
     <string name="back">zurück</string>
     <string name="title_activity_add_katergory_activity2">AddKatergoryActivity2</string>
     <string name="kategory_choose">Bitte Kategorie wählen</string>
+    <string name="title_activity_remove_kat">RemoveKatActivity</string>
 
 </resources>

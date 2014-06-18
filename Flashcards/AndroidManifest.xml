@@ -34,6 +34,10 @@
             android:name="com.tbz.flashcards.AddKatergoryActivity2"
             android:label="@string/title_activity_add_katergory_activity2" >
         </activity>
+        <activity
+            android:name="com.tbz.flashcards.RemoveKatActivity"
+            android:label="@string/title_activity_remove_kat" >
+        </activity>
     </application>
 
 </manifest>
