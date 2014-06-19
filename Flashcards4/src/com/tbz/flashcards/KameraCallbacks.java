@@ -29,9 +29,9 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 		// In welchem Verzeichnis soll die Datei abgelegt werden?
 		File dir = Environment
 				.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-		ContextWrapper cw = new ContextWrapper(getApplicationContext());
+//		ContextWrapper cw = new ContextWrapper(getApplicationContext(this.context));
         // path to /data/data/yourapp/app_data/imageDir
-       File directory = cw.getDir("image", Context.MODE_PRIVATE);
+//       File directory = cw.getDir("image", Context.MODE_PRIVATE);
 		// ggf. Verzeichnisse anlegen
 		dir.mkdirs();
 		// Name der Datei
