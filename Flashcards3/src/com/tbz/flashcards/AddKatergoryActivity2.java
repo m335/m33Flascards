@@ -100,5 +100,4 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 		}   
 	}
 
-
 }
