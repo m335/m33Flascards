@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.ShutterCallback;
@@ -28,6 +29,9 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 		// In welchem Verzeichnis soll die Datei abgelegt werden?
 		File dir = Environment
 				.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+		ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // path to /data/data/yourapp/app_data/imageDir
+       File directory = cw.getDir("image", Context.MODE_PRIVATE);
 		// ggf. Verzeichnisse anlegen
 		dir.mkdirs();
 		// Name der Datei
@@ -59,5 +63,8 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 			// Live-Vorschau neu starten
 			camera.startPreview();
 		}
+	}
+	public Context getApplicationContext(Context context){
+	return context;
 	}
 }
