@@ -30,20 +30,56 @@ public class EditListSetActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.editieren_list_set);
+		
+		final ListView listview = (ListView) findViewById(R.id.listview);
+	    final List<String> paths = new ArrayList<String>();
+	    try{
+		    File directory = new File("/data/data/com.tbz.flashcards/app_FlashCards/");
+		    File[] files = directory.listFiles();
+		    for (int i = 0; i < files.length; ++i) {
+		        paths.add(files[i].getName());
+		    }
 
-/*		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+
+	    }
+		catch (NullPointerException e)
+		{}
+	    
+	    final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, paths);
+	    listview.setAdapter(adapter);
+
+	    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+	      
+		@Override
+	      public void onItemClick(AdapterView<?> parent, final View view,
+	          int position, long id) {
+	        final String item = (String) parent.getItemAtPosition(position);
+	        try{
+	        File directory = new File("/data/data/com.tbz.flashcards/app_FlashCards/"+ item);
+	        File[] contents = directory.listFiles();
+	        if (contents.length == 0)
+	        {
+	        	Context context = getApplicationContext();
+	        	CharSequence text = "Keine Karten vorhanden";
+	        	int duration = Toast.LENGTH_SHORT;
+
+	        	Toast toast = Toast.makeText(context, text, duration);
+	        	toast.show();
+	        }
+	        else{
+	        	openQ(view);
+	            }
+	        
+	        }	        
+	        catch (NullPointerException e)
+	        {}
+	      }
+
+	    });
+	    
 		}
-*/	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.edit_list_set, menu);
-		return true;
-	}
 	
 	public void main(View view) {
 		startActivity(new Intent(this, MainActivity.class));
@@ -52,21 +88,10 @@ public class EditListSetActivity extends ActionBarActivity {
 	public void addSet(View view) {        
         startActivity(new Intent(this, AddKatergoryActivity2.class));
     }
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.editieren_list_set,
-					container, false);
-			return rootView;
-		}
-	}
+	
+	public void openQ(View view) {
+		startActivity(new Intent(this, QuestionActivity.class));
+    }
+	
 
 }

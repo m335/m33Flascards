@@ -4,9 +4,17 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -37,6 +45,18 @@
         <activity
             android:name="com.tbz.flashcards.RemoveKatActivity"
             android:label="@string/title_activity_remove_kat" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.QuestionActivity"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.FotoGalleryActivity"
+            android:label="@string/title_activity_foto_gallery" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.FotoShootActivity"
+            android:label="@string/title_activity_foto_shoot" >
         </activity>
     </application>
 

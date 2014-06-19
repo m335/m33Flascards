@@ -86,22 +86,6 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 	startActivity(new Intent(this, EditListSetActivity.class));
 		 }
 	
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater
-					.inflate(R.layout.activity_add_kategory, container, false);
-			return rootView;
-		}
-	}
 	
 	
 	public boolean NameOk(String kategory){

@@ -17,5 +17,14 @@
     <string name="title_activity_add_katergory_activity2">AddKatergoryActivity2</string>
     <string name="kategory_choose">Bitte Kategorie wählen</string>
     <string name="title_activity_remove_kat">RemoveKatActivity</string>
+    <string name="title_activity_question">QuestionActivity</string>
+    <string name="question_choose">Frage formulieren</string>
+    <string name="question_text">Fragetext</string>
+    <string name="question_do">Frage erstellen</string>
+    <string name="foto_gallery">Foto aus Gallerie</string>
+    <string name="foto_shoot">Foto aufnehmen</string>
+    <string name="foto_choose">Foto wählen</string>
+    <string name="title_activity_foto_gallery">FotoGalleryActivity</string>
+    <string name="title_activity_foto_shoot">FotoShootActivity</string>
 
 </resources>
