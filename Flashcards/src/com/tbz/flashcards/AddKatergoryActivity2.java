@@ -82,7 +82,6 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 			dirKat.mkdir();
 			dirIMG.mkdir();
 		
-		createFile(dirKat, "image");
 	}
 	startActivity(new Intent(this, EditListSetActivity.class));
 		 }
@@ -104,34 +103,13 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 		}
 	}
 	
-	private void createFile(File dir, String name) {
-		FileOutputStream fos = null;
-		try {
-			File file = new File(dir, name);
-			// Datei anlegen
-			fos = new FileOutputStream(file);
-		} catch (FileNotFoundException e) {
-			Log.e(TAG, "openFileOutput()", e);
-		} finally {
-			// Datei schliessen
-			if (fos != null) {
-				
-				try {
-					fos.close();
-				} catch (IOException e) {
-				}
-			}
-			
-		}
-
-	}
 	
 	public boolean NameOk(String kategory){
-		//String expression = [\p{Punct}];
+		String expression = "\\p{Punct}";
 		//| name.matches(expression)
 		//lieber mit fkt isEmpty()
 		String name = kategory;
-		if ( name == ""){
+		if ( name == "" || name.matches(expression)){
 		   return false;
 		} else {
 		   return true;
