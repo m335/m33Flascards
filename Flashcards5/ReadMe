@@ -1,0 +1,21 @@
+ ---------------------------------------------------------------------------------------------
+ |	READ ME FLASHCARDS																		  
+ |	
+ |	Diese App wurde im schulischen Umfeld im Rahmen einer Projektwoche erstellt.
+ |	Unsere App soll ermöglichen, Karteikarten mit Bildern zu befüllen damit man
+ |	anstatt nur mit Text auch mit Bildern lernen kann.
+ |	Durch eine einfache Bedingung sollen neue Karten hinzugefügt, oder gelöscht werden können 
+ |	
+ |	AUTHORS 	Davina Golomingi, Fabienne Pfister, Victoria Meyer
+ |	THANKS 		Philipp Friberg für seine Unterstützung im Projekt
+ |	ChangeLog 	V1: Layouts
+ |				V2: Layouts & Main Activity
+ |				V3: Layouts, ListActivity, EditListSetActivity
+ |				V4: Layouts, überarbeitung ListActivity, EditListSetActivity, 
+ |					neu CreateDirectory & AddKategorienActivity
+ |				V5: Layouts, AddKategorienActivity2, Überarbeitung	
+ |				V6: Layouts, QuestionActivity, FotoShootActivity, FotoGalleryActivity
+ |	COPYING / LICENSE 	Copyright by TBZ
+ |	BUGS 		1. Remove funktioniert nicht.
+ |				2. Abspeichern von Files in internen Speicher gelingt nicht.
+ |				3. Karten konnten nicht erstellt werden.
