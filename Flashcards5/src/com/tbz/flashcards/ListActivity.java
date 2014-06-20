@@ -68,7 +68,11 @@ public class ListActivity extends ActionBarActivity {
 	    });
 	   
 	  }
-	//Button der zurück zum Main führt
+
+	/**
+	 * Button der zurueck zum Main fuehrt
+	 * @param view
+	 */
 	public void main(View view) {
 		startActivity(new Intent(this, MainActivity.class));
     }

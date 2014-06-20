@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editCardResponse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -17,22 +17,11 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/buttonOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/recanglefair_button"
-        android:onClick="okButton"
-        android:text="@string/ok_button" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignBottom="@+id/editCardResponse"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
         android:text="@string/question_choose"
@@ -51,18 +40,8 @@
     
     ></TextView>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/foto_choose"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#0404B4" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/imgFCam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
@@ -72,13 +51,35 @@
         android:onClick="shootButton"
         android:text="@string/foto_shoot" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="36dp"
+        android:layout_below="@+id/editCardResponse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/foto_choose"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#0404B4" />
+
+    <Button
+        android:id="@+id/submitFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/recanglefair_button"
+        android:onClick="okButton"
+        android:text="@string/ok_button" />
+
+    <Button
+        android:id="@+id/imgFGal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgFCam"
+        android:layout_below="@+id/imgFCam"
+        android:layout_marginTop="21dp"
         android:background="@drawable/recangle_button"
         android:onClick="galleryButton"
         android:text="@string/foto_gallery" />

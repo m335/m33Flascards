@@ -9,16 +9,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.ShutterCallback;
+import android.os.Environment;
 import android.util.Log;
 
 public class KameraCallbacks implements ShutterCallback, PictureCallback {
 
 	private static final String TAG = KameraCallbacks.class.getSimpleName();
-	private Context context;
+	//	private Context context;
 
 	@Override
 	public void onShutter() {
@@ -29,12 +29,12 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 	public void onPictureTaken(byte[] data, Camera camera) {
 		Log.d(TAG, "onPictureTaken()");
 		// In welchem Verzeichnis soll die Datei abgelegt werden?
-	//	File dir = Environment
-	//			.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-		ContextWrapper cw = new ContextWrapper(getApplicationContext(this.context));
+		File dir = Environment
+				.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+		//	ContextWrapper cw = new ContextWrapper(getApplicationContext(this.context));
         // path to /data/data/yourapp/app_data/imageDir
-       File dir = cw.getDir("image", Context.MODE_WORLD_READABLE);
-		// für den Fall der Fälle: Verzeichnisse anlegen
+		//       File dir = cw.getDir("image", Context.MODE_WORLD_READABLE);
+		// fuer den Fall der Faelle: Verzeichnisse anlegen
 		dir.mkdirs();
 		// Name der Datei
 		File file = new File(dir, Long.toString(System.currentTimeMillis())
@@ -49,7 +49,7 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 		} catch (IOException e) {
 			Log.e(TAG, "onPictureTaken()", e);
 		} finally {
-			// Ströme schließen - etwaige Exceptions ignorieren
+			// Strï¿½me schlieï¿½en - etwaige Exceptions ignorieren
 			if (bos != null) {
 				try {
 					bos.close();
@@ -66,7 +66,8 @@ public class KameraCallbacks implements ShutterCallback, PictureCallback {
 			camera.startPreview();
 		}
 	}
-	/**@return Context Den aktuellen Context zurückgeben
+	/**
+	 * @return Context Den aktuellen Context zurï¿½ckgeben
 	 */
 	public Context getApplicationContext(Context context){
 	return context;

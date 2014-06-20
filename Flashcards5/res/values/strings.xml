@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Flashcards</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="welcome">Willkommen</string>
     <string name="title_activity_list">ListActivity</string>
@@ -21,10 +20,15 @@
     <string name="question_choose">Frage formulieren</string>
     <string name="question_text">Fragetext</string>
     <string name="question_do">Frage erstellen</string>
-    <string name="foto_gallery">Foto aus Gallerie</string>
+    <string name="foto_gallery">Foto aus Galerie</string>
     <string name="foto_shoot">Foto aufnehmen</string>
     <string name="foto_choose">Foto wählen</string>
     <string name="title_activity_foto_gallery">FotoGalleryActivity</string>
     <string name="title_activity_foto_shoot">FotoShootActivity</string>
+    <string name="title_activity_response">ResponseActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="response_Text">Antwort</string>
+    <string name="reponse_Title">Antwort</string>
+    <string name="response_choose">editiere hier deine Antwort</string>
 
 </resources>

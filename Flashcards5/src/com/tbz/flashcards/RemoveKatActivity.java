@@ -34,7 +34,11 @@ public class RemoveKatActivity extends ListActivity {
 	        getModel());
 	    setListAdapter(adapter);
 	  }
-		private List<Model> getModel() {
+	/**
+	 * 	
+	 * @return
+	 */
+	private List<Model> getModel() {
 	    final ListView listview = (ListView) findViewById(R.id.listview);
 	    final List<Model> paths = new ArrayList<Model>();
 	    try{
@@ -48,12 +52,21 @@ public class RemoveKatActivity extends ListActivity {
 		{}	 
 	    return paths;
 	    }
-		private Model get(String s) {
+	/**
+	 * 	
+	 * @param s
+	 * @return
+	 */
+	private Model get(String s) {
 		    return new Model(s);
 		  }
 	
+	/**
+	* 
+	* @param view
+	*/	
 	public void main(View view) {
-		startActivity(new Intent(this, MainActivity.class));
-  }
+		   startActivity(new Intent(this, MainActivity.class));
+        }
 
 	} 

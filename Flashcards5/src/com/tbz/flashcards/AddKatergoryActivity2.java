@@ -4,22 +4,14 @@
 package com.tbz.flashcards;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import android.app.Activity;
-import android.util.Log;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -30,7 +22,7 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 	private File dirMain;
 	private File dirIMG;
 	private File dirKat;
-	private static final String TAG = AddKatergoryActivity2.class.getSimpleName();
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +31,12 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 
 		dirMain = getDir("FlashCards", MODE_WORLD_READABLE);
 						
+		//Schaltflächen als Objekte
 		editName = (EditText) findViewById(R.id.editName);
 		buttonOK = (Button) findViewById(R.id.buttonOK);
 		  
 		buttonOK.setOnClickListener(this);
-
-/*		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-		
-*/			
+			
    }
 
 	@Override
@@ -76,10 +63,9 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 	katName = editName.getText().toString();
-	//Erzeugen eines leeren Kategori-Ordners
+	//Erzeugen eines leeren Kategori-Ordners wenn der Name stimmt
 	if(NameOk(katName)){
-		//File dirKat = getDir(katName, MODE_WORLD_READABLE);
-		//createFile(dirMain, "image");
+		//Files im richtigen Ordner werden hier erstellt
 		dirKat = new File(dirMain, katName);
 		dirIMG = new File(dirKat , "image");
 			dirKat.mkdir();
@@ -91,10 +77,14 @@ public class AddKatergoryActivity2 extends Activity implements OnClickListener {
 	
 	
 	
+	/**
+	 * @author Davina
+	 * @param kategory Der Name der Kategorie
+	 * @return true, wenn der Name den Kriterien entspricht
+	 */
 	public boolean NameOk(String kategory){
+		//Name wird ueberprüft, es sollte nicht leer sein und keien Puntuation enthalten
 		String expression = "\\p{Punct}";
-		//| name.matches(expression)
-		//lieber mit fkt isEmpty()
 		String name = kategory;
 		if ( name == "" || name.matches(expression)){
 		   return false;

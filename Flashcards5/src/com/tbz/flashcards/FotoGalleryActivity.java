@@ -22,7 +22,7 @@ public class FotoGalleryActivity extends Activity {
 		startActivityForResult(intent, RQ_GALLERY_PICK);
 	}
 
-	//Gallerie-App wählen und Starten
+	//Gallerie-App wï¿½hlen und Starten
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);

@@ -75,15 +75,27 @@ public class EditListSetActivity extends ActionBarActivity {
 	    
 		}
 
-	//Button, der zurück zum Main führt
+	//Button, der zurï¿½ck zum Main fï¿½hrt
+	/**
+	 * 
+	 * @param view
+	 */
 	public void main(View view) {
 		startActivity(new Intent(this, MainActivity.class));
     }
-	//Button, der auf die View für eine neue Kategorie führt
+	//Button, der auf die View fï¿½r eine neue Kategorie fï¿½hrt
+	/**
+	 * 
+	 * @param view
+	 */
 	public void addSet(View view) {        
         startActivity(new Intent(this, AddKatergoryActivity2.class));
     }
-	//Button, der zur View der Erstellung einer neuen Frage führt
+	//Button, der zur View der Erstellung einer neuen Frage fï¿½hrt
+	/**
+	 * 
+	 * @param view
+	 */
 	public void openQ(View view) {
 		startActivity(new Intent(this, QuestionActivity.class));
     }
