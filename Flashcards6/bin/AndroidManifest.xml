@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tbz.flashcards"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.tbz.flashcards.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.ListActivity"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.EditListSetActivity"
+            android:label="@string/title_activity_edit_list_set" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.AddKatergoryActivity2"
+            android:label="@string/title_activity_add_katergory_activity2" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.RemoveKatActivity"
+            android:label="@string/title_activity_remove_kat" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.QuestionActivity"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.FotoGalleryActivity"
+            android:label="@string/title_activity_foto_gallery" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.FotoShootActivity"
+            android:label="@string/title_activity_foto_shoot" >
+        </activity>
+        <activity
+            android:name="com.tbz.flashcards.ResponseActivity"
+            android:label="@string/title_activity_response" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/editCardResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="@string/response_Text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editCardResponse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:text="@string/response_choose"
+        android:textColor="#0404B4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/reponse_Title"
+        android:textColor="#0404B4"
+        android:textSize="24sp" >
+</TextView>
+
+    <Button
+        android:id="@+id/imgFGal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/recangle_button"
+        android:onClick="shootButton"
+        android:text="@string/foto_shoot" />
+
+    <Button
+        android:id="@+id/imgFCam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgFGal"
+        android:layout_below="@+id/imgFGal"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/recangle_button"
+        android:onClick="galleryButton"
+        android:text="@string/foto_gallery" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editCardResponse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/foto_choose"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#0404B4" />
+
+    <Button
+        android:id="@+id/submitCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/recanglefair_button"
+        android:onClick="okButton"
+        android:text="@string/ok_button" />
+
+</RelativeLayout>
